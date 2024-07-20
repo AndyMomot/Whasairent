@@ -41,6 +41,15 @@
 		4706DBE82C4BCD6F00980739 /* KulimPark-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4706DBDD2C4BCD6F00980739 /* KulimPark-ExtraLight.ttf */; };
 		4706DBEB2C4BD32A00980739 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBEA2C4BD32A00980739 /* PreloaderView.swift */; };
 		4706DBED2C4BD33100980739 /* PreloaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBEC2C4BD33100980739 /* PreloaderViewModel.swift */; };
+		4706DBF42C4BEE1400980739 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBF02C4BEE1400980739 /* OnboardingView.swift */; };
+		4706DBF52C4BEE1400980739 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBF12C4BEE1400980739 /* OnboardingViewModel.swift */; };
+		4706DBF62C4BEE1400980739 /* OnboardingViewTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBF32C4BEE1400980739 /* OnboardingViewTabView.swift */; };
+		4706DBF82C4BF54A00980739 /* PlaneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBF72C4BF54A00980739 /* PlaneView.swift */; };
+		4706DBFB2C4BFE8A00980739 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBFA2C4BFE8A00980739 /* PrivacyPolicyView.swift */; };
+		4706DBFD2C4BFE9200980739 /* PrivacyPolicyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBFC2C4BFE9200980739 /* PrivacyPolicyViewModel.swift */; };
+		4706DC102C4C019200980739 /* SwiftUIViewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC052C4C019200980739 /* SwiftUIViewWebView.swift */; };
+		4706DC122C4C019200980739 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC092C4C019200980739 /* InputField.swift */; };
+		4706DC142C4C019200980739 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC0D2C4C019200980739 /* NextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +89,15 @@
 		4706DBDD2C4BCD6F00980739 /* KulimPark-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-ExtraLight.ttf"; sourceTree = "<group>"; };
 		4706DBEA2C4BD32A00980739 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
 		4706DBEC2C4BD33100980739 /* PreloaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderViewModel.swift; sourceTree = "<group>"; };
+		4706DBF02C4BEE1400980739 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		4706DBF12C4BEE1400980739 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		4706DBF32C4BEE1400980739 /* OnboardingViewTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewTabView.swift; sourceTree = "<group>"; };
+		4706DBF72C4BF54A00980739 /* PlaneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneView.swift; sourceTree = "<group>"; };
+		4706DBFA2C4BFE8A00980739 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		4706DBFC2C4BFE9200980739 /* PrivacyPolicyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewModel.swift; sourceTree = "<group>"; };
+		4706DC052C4C019200980739 /* SwiftUIViewWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIViewWebView.swift; sourceTree = "<group>"; };
+		4706DC092C4C019200980739 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		4706DC0D2C4C019200980739 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +131,7 @@
 		4706DB4F2C4BC69C00980739 /* Whasairent */ = {
 			isa = PBXGroup;
 			children = (
+				4706DBFE2C4C019200980739 /* Helpers */,
 				4706DBAC2C4BCCF400980739 /* Resources */,
 				4706DB642C4BC73D00980739 /* App */,
 				4706DB912C4BCB6300980739 /* Extensions */,
@@ -140,6 +159,8 @@
 			children = (
 				4706DB662C4BC81100980739 /* RootContentView */,
 				4706DBE92C4BD31800980739 /* Preloader */,
+				4706DBEE2C4BEE1400980739 /* Onboarding */,
+				4706DBF92C4BFE7100980739 /* Privacy */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -257,6 +278,84 @@
 			path = Preloader;
 			sourceTree = "<group>";
 		};
+		4706DBEE2C4BEE1400980739 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBEF2C4BEE1400980739 /* OnboardingView */,
+				4706DBF22C4BEE1400980739 /* OnboardingViewTabView */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4706DBEF2C4BEE1400980739 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBF72C4BF54A00980739 /* PlaneView.swift */,
+				4706DBF02C4BEE1400980739 /* OnboardingView.swift */,
+				4706DBF12C4BEE1400980739 /* OnboardingViewModel.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		4706DBF22C4BEE1400980739 /* OnboardingViewTabView */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBF32C4BEE1400980739 /* OnboardingViewTabView.swift */,
+			);
+			path = OnboardingViewTabView;
+			sourceTree = "<group>";
+		};
+		4706DBF92C4BFE7100980739 /* Privacy */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBFA2C4BFE8A00980739 /* PrivacyPolicyView.swift */,
+				4706DBFC2C4BFE9200980739 /* PrivacyPolicyViewModel.swift */,
+			);
+			path = Privacy;
+			sourceTree = "<group>";
+		};
+		4706DBFE2C4C019200980739 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBFF2C4C019200980739 /* Views */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4706DBFF2C4C019200980739 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC042C4C019200980739 /* WebView */,
+				4706DC082C4C019200980739 /* InputField */,
+				4706DC0C2C4C019200980739 /* NextButton */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4706DC042C4C019200980739 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC052C4C019200980739 /* SwiftUIViewWebView.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		4706DC082C4C019200980739 /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC092C4C019200980739 /* InputField.swift */,
+			);
+			path = InputField;
+			sourceTree = "<group>";
+		};
+		4706DC0C2C4C019200980739 /* NextButton */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC0D2C4C019200980739 /* NextButton.swift */,
+			);
+			path = NextButton;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,22 +464,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4706DC142C4C019200980739 /* NextButton.swift in Sources */,
+				4706DC102C4C019200980739 /* SwiftUIViewWebView.swift in Sources */,
 				4706DBC42C4BCCF500980739 /* Colors.generated.swift in Sources */,
 				4706DBED2C4BD33100980739 /* PreloaderViewModel.swift in Sources */,
+				4706DC122C4C019200980739 /* InputField.swift in Sources */,
+				4706DBF62C4BEE1400980739 /* OnboardingViewTabView.swift in Sources */,
 				4706DBC22C4BCCF500980739 /* Images.generated.swift in Sources */,
+				4706DBF42C4BEE1400980739 /* OnboardingView.swift in Sources */,
 				4706DB552C4BC69C00980739 /* RootViewController.swift in Sources */,
 				4706DB512C4BC69C00980739 /* AppDelegate.swift in Sources */,
 				4706DBA62C4BCB6300980739 /* Double+Additions.swift in Sources */,
 				4706DBA72C4BCB6300980739 /* Date+Additions.swift in Sources */,
 				4706DB772C4BC97E00980739 /* FileManagerService.swift in Sources */,
+				4706DBFD2C4BFE9200980739 /* PrivacyPolicyViewModel.swift in Sources */,
 				4706DBEB2C4BD32A00980739 /* PreloaderView.swift in Sources */,
 				4706DBA82C4BCB6300980739 /* View+Additions.swift in Sources */,
 				4706DB682C4BC81800980739 /* RootContentView.swift in Sources */,
+				4706DBF52C4BEE1400980739 /* OnboardingViewModel.swift in Sources */,
 				4706DBCA2C4BCCF500980739 /* Fonts.generated.swift in Sources */,
+				4706DBFB2C4BFE8A00980739 /* PrivacyPolicyView.swift in Sources */,
 				4706DBA92C4BCB6300980739 /* String+Additions.swift in Sources */,
 				4706DB6A2C4BC82400980739 /* RootContentViewModel.swift in Sources */,
 				4706DBCF2C4BCCF500980739 /* Strings.generated.swift in Sources */,
 				4706DB532C4BC69C00980739 /* SceneDelegate.swift in Sources */,
+				4706DBF82C4BF54A00980739 /* PlaneView.swift in Sources */,
 				4706DB762C4BC97E00980739 /* DefaultsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
