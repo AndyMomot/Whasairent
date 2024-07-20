@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "preloadeProgressBackground.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

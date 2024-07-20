@@ -39,6 +39,8 @@
 		4706DBE62C4BCD6F00980739 /* KulimPark-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4706DBDB2C4BCD6F00980739 /* KulimPark-Regular.ttf */; };
 		4706DBE72C4BCD6F00980739 /* KulimPark-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4706DBDC2C4BCD6F00980739 /* KulimPark-Light.ttf */; };
 		4706DBE82C4BCD6F00980739 /* KulimPark-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4706DBDD2C4BCD6F00980739 /* KulimPark-ExtraLight.ttf */; };
+		4706DBEB2C4BD32A00980739 /* PreloaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBEA2C4BD32A00980739 /* PreloaderView.swift */; };
+		4706DBED2C4BD33100980739 /* PreloaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DBEC2C4BD33100980739 /* PreloaderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,8 @@
 		4706DBDB2C4BCD6F00980739 /* KulimPark-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Regular.ttf"; sourceTree = "<group>"; };
 		4706DBDC2C4BCD6F00980739 /* KulimPark-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-Light.ttf"; sourceTree = "<group>"; };
 		4706DBDD2C4BCD6F00980739 /* KulimPark-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KulimPark-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4706DBEA2C4BD32A00980739 /* PreloaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderView.swift; sourceTree = "<group>"; };
+		4706DBEC2C4BD33100980739 /* PreloaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreloaderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4706DB662C4BC81100980739 /* RootContentView */,
+				4706DBE92C4BD31800980739 /* Preloader */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -241,6 +246,15 @@
 				4706DBC02C4BCCF400980739 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		4706DBE92C4BD31800980739 /* Preloader */ = {
+			isa = PBXGroup;
+			children = (
+				4706DBEA2C4BD32A00980739 /* PreloaderView.swift */,
+				4706DBEC2C4BD33100980739 /* PreloaderViewModel.swift */,
+			);
+			path = Preloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,12 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4706DBC42C4BCCF500980739 /* Colors.generated.swift in Sources */,
+				4706DBED2C4BD33100980739 /* PreloaderViewModel.swift in Sources */,
 				4706DBC22C4BCCF500980739 /* Images.generated.swift in Sources */,
 				4706DB552C4BC69C00980739 /* RootViewController.swift in Sources */,
 				4706DB512C4BC69C00980739 /* AppDelegate.swift in Sources */,
 				4706DBA62C4BCB6300980739 /* Double+Additions.swift in Sources */,
 				4706DBA72C4BCB6300980739 /* Date+Additions.swift in Sources */,
 				4706DB772C4BC97E00980739 /* FileManagerService.swift in Sources */,
+				4706DBEB2C4BD32A00980739 /* PreloaderView.swift in Sources */,
 				4706DBA82C4BCB6300980739 /* View+Additions.swift in Sources */,
 				4706DB682C4BC81800980739 /* RootContentView.swift in Sources */,
 				4706DBCA2C4BCCF500980739 /* Fonts.generated.swift in Sources */,

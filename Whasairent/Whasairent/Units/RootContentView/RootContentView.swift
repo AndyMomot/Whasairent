@@ -13,7 +13,7 @@ struct RootContentView: View {
     var body: some View {
         Group {
             if viewModel.showPreloader {
-                Text("PreloaderView")
+                PreloaderView()
             } else {
                 switch viewModel.viewState {
                 case .onboarding:

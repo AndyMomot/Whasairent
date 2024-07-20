@@ -1,25 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="KulimPark-Bold.ttf">
+            <string>KulimPark-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preloaderBackground" translatesAutoresizingMaskIntoConstraints="NO" id="rlI-hG-bKC">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preloaderLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ii8-ht-U3v">
+                                <rect key="frame" x="52" y="183" width="289" height="196"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preloaderBottomView" translatesAutoresizingMaskIntoConstraints="NO" id="n6r-cK-qJR">
+                                <rect key="frame" x="0.0" y="733" width="393" height="129"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preloadeProgressBackground" translatesAutoresizingMaskIntoConstraints="NO" id="EqF-3b-ISB">
+                                <rect key="frame" x="29" y="713.33333333333337" width="335" height="54.666666666666629"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fgP-Vz-LtN">
+                                <rect key="frame" x="56" y="738.66666666666663" width="281" height="4"/>
+                                <color key="tintColor" name="blackCustom"/>
+                                <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ff-f8-Ih4">
+                                <rect key="frame" x="56" y="714.66666666666663" width="32" height="23"/>
+                                <fontDescription key="fontDescription" name="KulimPark-Bold" family="Kulim Park" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ff-f8-Ih4" firstAttribute="bottom" secondItem="fgP-Vz-LtN" secondAttribute="bottom" constant="-5" id="0wR-Y7-Og8"/>
+                            <constraint firstItem="n6r-cK-qJR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6y3-N7-JlD"/>
+                            <constraint firstItem="fgP-Vz-LtN" firstAttribute="leading" secondItem="EqF-3b-ISB" secondAttribute="leading" constant="27" id="7xa-Mw-xIX"/>
+                            <constraint firstItem="EqF-3b-ISB" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.064" id="Bml-Lo-EkK"/>
+                            <constraint firstAttribute="bottom" secondItem="rlI-hG-bKC" secondAttribute="bottom" id="DdY-Sh-i09"/>
+                            <constraint firstItem="ii8-ht-U3v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="GL7-kH-EgL"/>
+                            <constraint firstItem="EqF-3b-ISB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="Hiq-hm-lbR"/>
+                            <constraint firstItem="ii8-ht-U3v" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.23" id="WbZ-Ic-jbr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Ff-f8-Ih4" secondAttribute="trailing" symbolic="YES" id="XAX-gB-Ntf"/>
+                            <constraint firstItem="rlI-hG-bKC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ajs-c4-41o"/>
+                            <constraint firstItem="rlI-hG-bKC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="byy-wZ-5p0"/>
+                            <constraint firstItem="fgP-Vz-LtN" firstAttribute="trailing" secondItem="EqF-3b-ISB" secondAttribute="trailing" constant="-27" id="eK9-T3-3gZ"/>
+                            <constraint firstItem="fgP-Vz-LtN" firstAttribute="centerY" secondItem="EqF-3b-ISB" secondAttribute="centerY" id="fB1-zS-tvs"/>
+                            <constraint firstItem="n6r-cK-qJR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i3n-q1-ZkJ"/>
+                            <constraint firstAttribute="bottom" secondItem="n6r-cK-qJR" secondAttribute="bottom" constant="-10" id="iCM-wQ-zvu"/>
+                            <constraint firstItem="ii8-ht-U3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="jok-R5-Ofj"/>
+                            <constraint firstAttribute="bottom" secondItem="EqF-3b-ISB" secondAttribute="bottom" constant="84" id="pb6-Fo-Z60"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ii8-ht-U3v" secondAttribute="trailing" constant="52" id="sW5-59-yzB"/>
+                            <constraint firstItem="rlI-hG-bKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t5W-g3-ypL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EqF-3b-ISB" secondAttribute="trailing" constant="29" id="vYR-Yn-Fqk"/>
+                            <constraint firstItem="8Ff-f8-Ih4" firstAttribute="leading" secondItem="fgP-Vz-LtN" secondAttribute="leading" id="wfJ-mx-XzD"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="preloadeProgressBackground" width="365" height="60"/>
+        <image name="preloaderBackground" width="423" height="932"/>
+        <image name="preloaderBottomView" width="423" height="129"/>
+        <image name="preloaderLogo" width="319" height="239"/>
+        <namedColor name="blackCustom">
+            <color red="0.14509803921568629" green="0.14509803921568629" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
