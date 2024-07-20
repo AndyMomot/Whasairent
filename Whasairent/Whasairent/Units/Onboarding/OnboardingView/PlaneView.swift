@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct PlaneView: View {
+    var item: OnboardingView.OnboardingItem
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Asset.sky.swiftUIImage
+                .resizable()
+                .scaledToFit()
+            
+            Asset.ellipse.swiftUIImage
+                .resizable()
+                .scaledToFit()
+                .rotationEffect(.degrees(item.elipsRotationDegrees))
+            
+            Image(item.imageName)
+                .resizable()
+                .scaledToFit()
+        }
     }
 }
 
 #Preview {
-    PlaneView()
+    ZStack {
+        Colors.greenCustom.swiftUIColor
+        
+        PlaneView(item: .second)
+    }
 }

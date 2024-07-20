@@ -22,6 +22,13 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let ellipse = ImageAsset(name: "ellipse")
+  internal static let onboardingLogo = ImageAsset(name: "onboardingLogo")
+  internal static let plane1 = ImageAsset(name: "plane1")
+  internal static let plane2 = ImageAsset(name: "plane2")
+  internal static let plane3 = ImageAsset(name: "plane3")
+  internal static let privacy = ImageAsset(name: "privacy")
+  internal static let sky = ImageAsset(name: "sky")
   internal static let preloadeProgressBackground = ImageAsset(name: "preloadeProgressBackground")
   internal static let preloaderBackground = ImageAsset(name: "preloaderBackground")
   internal static let preloaderBottomView = ImageAsset(name: "preloaderBottomView")

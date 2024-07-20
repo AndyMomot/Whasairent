@@ -9,6 +9,7 @@ import Foundation
 
 extension OnboardingView {
     final class OnboardingViewModel: ObservableObject {
+        @Published var isAnimatingImageOpacity = false
         @Published var showPrivacyPolicy = false
         let privacyPolicyURL = URL(string: "https://tradifundint.info")
     }
@@ -21,22 +22,22 @@ extension OnboardingView {
         var imageName: String {
             switch self {
             case .first:
-                return Asset.onboarding1.name
+                return Asset.plane1.name
             case .second:
-                return Asset.onboarding2.name
+                return Asset.plane2.name
             case .third:
-                return Asset.onboarding3.name
+                return Asset.plane3.name
             }
         }
         
         var text: String {
             switch self {
             case .first:
-                return "Готов запустить свой проект? Наше приложение поможет собрать средства и достичь успеха!"
+                return "Witamy w naszej aplikacji do zarządzania transportem lotniczym! Pomożemy Ci zmaksymalizować zysk z każdego lotu. Rozpocznij efektywne zarządzanie już dziś!"
             case .second:
-                return "Исследуй мир краудфандинга с нашим приложением. Начни свой путь к прибыли уже сегодня!"
+                return "Twój idealny asystent wynajmu samolotów jest gotowy do pracy. Zoptymalizuj wydatki i zwiększ przychody."
             case .third:
-                return "Планируй бюджет для своей идеи. Мы здесь, чтобы помочь осуществить мечту!"
+                return "Zacznij efektywnie zarządzać swoimi samolotami z nami. Nasza aplikacja uprości wszystkie procesy leasingowe. Zapewnij sobie stały dochód z każdego lotu."
             }
         }
         
@@ -47,6 +48,21 @@ extension OnboardingView {
             case .second, .third:
                 return .third
             }
+        }
+        
+        var elipsRotationDegrees: Double {
+            switch self {
+            case .first:
+                return .zero
+            case .second:
+                return 120
+            case .third:
+                return -100
+            }
+        }
+        
+        var count: Int {
+            OnboardingItem.allCases.count
         }
     }
 }

@@ -14,106 +14,97 @@ struct OnboardingView: View {
     @EnvironmentObject private var rootViewModel: RootContentView.RootContentViewModel
     @StateObject private var viewModel = OnboardingViewModel()
     
+    private var bounds: CGRect {
+        UIScreen.main.bounds
+    }
+    
     var body: some View {
         ZStack {
-            Colors.blackCustom.swiftUIColor
-                .ignoresSafeArea()
+            Colors.greenCustom.swiftUIColor
             
-            if item != .third {
-                VStack {
-                    HStack {
-                        Spacer()
-                        Button {
-                            withAnimation {
-                                currentPageIndex = OnboardingView.OnboardingItem.third.rawValue
-                            }
-                        } label: {
-                            Text("Пропустить")
-                                .foregroundStyle(.white)
-                                .font(Fonts.SFProDisplay.regular.swiftUIFont(size: 14))
-                        }
-                    }
-                    .padding(.horizontal)
-                    Spacer()
-                }
-            }
-            
-            VStack {
-                // Images
-                VStack(spacing: 0) {
-                    Image(item.imageName)
+            VStack(spacing: 50) {
+                VStack(spacing: 40) {
+                    Asset.onboardingLogo.swiftUIImage
                         .resizable()
                         .scaledToFit()
+                        .padding(.top, 22)
+                        .padding(.horizontal, 86)
                     
-                    HStack {
-                        Spacer(minLength: 100)
-                        Asset.onboardingBlank.swiftUIImage
-                            .resizable()
-                            .scaledToFit()
-                            .padding(.horizontal, 13)
-                            .overlay {
-                                Text(item.text)
-                                    .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                                    .font(Fonts.SFProDisplay.bold.swiftUIFont(size: 14))
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 16)
-                            }
-                    }
-                    .offset(y: -40)
+                    PlaneView(item: item)
+                        .opacity(viewModel.isAnimatingImageOpacity ? 1 : 0)
+                        .frame(maxWidth: viewModel.isAnimatingImageOpacity ? bounds.width * 0.6 : 100,
+                               maxHeight: viewModel.isAnimatingImageOpacity ? bounds.width * 0.6 : 100)
+                        .animation(.bouncy(duration: 1.5),
+                                   value: viewModel.isAnimatingImageOpacity)
+                    
                 }
                 
-                Spacer(minLength: 20)
-                
-                // Buttons
-                if item == .third {
-                    VStack(spacing: 16) {
-                        NextButton(title: "Начать") {
-                            rootViewModel.setFlow(.main)
-                        }
-                        .padding(.horizontal)
-                        
-                        Button {
-                            viewModel.showPrivacyPolicy.toggle()
-                        } label: {
-                            VStack(spacing: 4) {
-                                Text("Выбрав “Начать” Я согласен с")
-                                    .foregroundStyle(.white)
-                                Text("политикой конфиденциальности")
-                                    .foregroundStyle(Colors.firuza.swiftUIColor)
-                            }
-                            .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 14))
-                            .multilineTextAlignment(.center)
-                        }
-                    }
-                } else {
-                    Button {
-                        withAnimation {
-                            currentPageIndex = item.next.rawValue
-                        }
-                    } label: {
-                        HStack(spacing: 8) {
+                Rectangle()
+                    .foregroundStyle(.white)
+                    .cornerRadius(40, corners: [.topLeft, .topRight])
+                    .overlay {
+                        VStack {
                             Spacer()
-                            Text("Далее")
-                                .underline()
+                            Text(item.text)
+                                .foregroundStyle(Colors.blackCustom.swiftUIColor)
+                                .font(Fonts.KulimPark.regular.swiftUIFont(size: 18))
                                 .multilineTextAlignment(.center)
-                            Image(systemName: "arrow.right")
+                                .padding(.horizontal)
+                            
+                            Spacer()
+                            
+                            HStack {
+                                HStack(spacing: 15) {
+                                    let range = Array(0..<item.count)
+                                    ForEach(range, id: \.self) { index in
+                                        var isCurrent = index == currentPageIndex
+                                       RoundedRectangle(cornerRadius: 4)
+                                            .foregroundStyle(isCurrent ? Colors.greenCustom.swiftUIColor : Colors.grayCustom.swiftUIColor)
+                                            .frame(width: 18, height: 18)
+                                    }
+                                }
+                                .padding(.leading)
+                                
+                                Spacer()
+                                
+                                Button {
+                                    withAnimation {
+                                        currentPageIndex = item.next.rawValue
+                                    }
+                                    if item == .third {
+                                        rootViewModel.setFlow(.privacyPolicy)
+                                    }
+                                } label: {
+                                    Rectangle()
+                                        .foregroundStyle(Colors.greenCustom.swiftUIColor)
+                                        .frame(width: 126,
+                                               height: 63)
+                                        .cornerRadius(30, corners: [.topLeft, .bottomLeft])
+                                        .overlay {
+                                            HStack {
+                                                Image(systemName: "arrow.right")
+                                                    .foregroundStyle(.white)
+                                                    .font(Fonts.KulimPark.regular.swiftUIFont(size: 40))
+                                                    .padding()
+                                                Spacer()
+                                            }
+                                        }
+                                }
+
+                            }
+                            
                             Spacer()
                         }
-                        .foregroundStyle(Colors.firuza.swiftUIColor)
-                        .font(Fonts.SFProDisplay.regular.swiftUIFont(size: 16))
                     }
-                }
             }
-            .padding(.vertical, 100)
         }
-        .sheet(isPresented: $viewModel.showPrivacyPolicy) {
-            if let url = viewModel.privacyPolicyURL {
-                WebView(url: url)
-            }
+        .ignoresSafeArea(edges: .bottom)
+        .onAppear {
+            viewModel.isAnimatingImageOpacity = true
         }
     }
 }
 
 #Preview {
-    OnboardingView(item: .first, currentPageIndex: .constant(0))
+    OnboardingView(item: .second, currentPageIndex: .constant(1))
 }

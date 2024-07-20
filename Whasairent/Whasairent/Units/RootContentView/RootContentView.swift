@@ -17,10 +17,10 @@ struct RootContentView: View {
             } else {
                 switch viewModel.viewState {
                 case .onboarding:
-                    Text("OnboardingViewTabView")
+                    OnboardingViewTabView()
                         .environmentObject(viewModel)
                 case .privacyPolicy:
-                    Text("PrivacyPolicy")
+                    PrivacyPolicyView()
                         .environmentObject(viewModel)
                 case .main:
                     Text("TabBar")

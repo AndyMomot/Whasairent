@@ -16,11 +16,11 @@ struct NextButton: View {
                 Spacer()
                 Text(title)
                     .foregroundStyle(.white)
-                    .font(Fonts.SFProDisplay.bold.swiftUIFont(size: 20))
+                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 20))
                 Spacer()
             }
             .padding(.vertical)
-            .background(Colors.firuza.swiftUIColor)
+            .background(Colors.blackCustom.swiftUIColor)
             .cornerRadius(8, corners: .allCorners)
         }
 

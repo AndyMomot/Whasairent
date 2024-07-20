@@ -20,25 +20,25 @@ struct InputField: View {
         VStack(alignment: .leading) {
             Text(title)
                 .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
+                .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
             
             HStack(spacing: 10) {
                 switch style {
                 case .text:
                     TextField(text: $text) {
                         Text(placeholder)
-                            .foregroundStyle(Colors.grayDark.swiftUIColor)
-                            .font(Fonts.SFProDisplay.lightItalic.swiftUIFont(size: 16))
+                            .foregroundStyle(Colors.grayCustom.swiftUIColor)
+                            .font(Fonts.KulimPark.lightItalic.swiftUIFont(size: 16))
                     }
                     .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                    .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
+                    .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
                     .padding(.vertical, 28)
                     .padding(.horizontal, 12)
                 case .date:
                     if text.isEmpty {
                         Text(placeholder)
-                            .foregroundStyle(Colors.grayDark.swiftUIColor)
-                            .font(Fonts.SFProDisplay.lightItalic.swiftUIFont(size: 16))
+                            .foregroundStyle(Colors.grayCustom.swiftUIColor)
+                            .font(Fonts.KulimPark.lightItalic.swiftUIFont(size: 16))
                             .padding(.vertical, 28)
                             .padding(.horizontal, 12)
                             .onTapGesture {
@@ -49,7 +49,7 @@ struct InputField: View {
                     } else {
                         Text(text)
                             .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                            .font(Fonts.SFProDisplay.medium.swiftUIFont(size: 16))
+                            .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
                             .padding(.vertical, 28)
                             .padding(.horizontal, 12)
                             .onTapGesture {
@@ -61,18 +61,15 @@ struct InputField: View {
                     
                     Spacer()
                     
-                    Button {
-                        withAnimation {
-                            showCalendarPicker.toggle()
-                        }
-                    } label: {
-                        Asset.calendar.swiftUIImage
-                    }
-                    .padding()
+//                    Button {
+//                        withAnimation {
+//                            showCalendarPicker.toggle()
+//                        }
+//                    } label: {
+//                        Asset.calendar.swiftUIImage
+//                    }
+//                    .padding()
                 }
-            }
-            .overlay {
-                DashedBorder(color: Colors.blackCustom.swiftUIColor)
             }
             
             if showCalendarPicker {
