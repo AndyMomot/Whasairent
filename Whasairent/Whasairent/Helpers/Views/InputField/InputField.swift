@@ -1,108 +1,47 @@
 //
 //  InputField.swift
-//  Tradifundint
-//
-//  Created by Andrii Momot on 08.07.2024.
-//
 
 import SwiftUI
 
 struct InputField: View {
-    var style: Style = .text
     var title: String
+    var titleColor: Color
     var placeholder: String
     @Binding var text: String
-    
-    @State private var showCalendarPicker = false
-    @State private var selectedDate: Date = .init()
     
     var body: some View {
         VStack(alignment: .leading) {
             Text(title)
-                .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
+                .foregroundStyle(titleColor)
+                .font(Fonts.KulimPark.bold.swiftUIFont(size: 14))
+                .padding(.horizontal, 4)
             
-            HStack(spacing: 10) {
-                switch style {
-                case .text:
+            RoundedRectangle(cornerRadius: 30)
+                .foregroundStyle(.white)
+                .frame(height: 50)
+                .overlay {
                     TextField(text: $text) {
                         Text(placeholder)
-                            .foregroundStyle(Colors.grayCustom.swiftUIColor)
-                            .font(Fonts.KulimPark.lightItalic.swiftUIFont(size: 16))
+                            .foregroundStyle(.gray)
+                            .font(Fonts.KulimPark.extraLight.swiftUIFont(size: 14))
                     }
                     .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                    .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
-                    .padding(.vertical, 28)
-                    .padding(.horizontal, 12)
-                case .date:
-                    if text.isEmpty {
-                        Text(placeholder)
-                            .foregroundStyle(Colors.grayCustom.swiftUIColor)
-                            .font(Fonts.KulimPark.lightItalic.swiftUIFont(size: 16))
-                            .padding(.vertical, 28)
-                            .padding(.horizontal, 12)
-                            .onTapGesture {
-                                withAnimation {
-                                    showCalendarPicker.toggle()
-                                }
-                            }
-                    } else {
-                        Text(text)
-                            .foregroundStyle(Colors.blackCustom.swiftUIColor)
-                            .font(Fonts.KulimPark.regular.swiftUIFont(size: 16))
-                            .padding(.vertical, 28)
-                            .padding(.horizontal, 12)
-                            .onTapGesture {
-                                withAnimation {
-                                    showCalendarPicker.toggle()
-                                }
-                            }
-                    }
-                    
-                    Spacer()
-                    
-//                    Button {
-//                        withAnimation {
-//                            showCalendarPicker.toggle()
-//                        }
-//                    } label: {
-//                        Asset.calendar.swiftUIImage
-//                    }
-//                    .padding()
+                    .font(Fonts.KulimPark.bold.swiftUIFont(size: 20))
+                    .padding(.horizontal)
                 }
-            }
-            
-            if showCalendarPicker {
-                DatePicker("Select Date",
-                           selection: $selectedDate,
-                           in: Date()...,
-                           displayedComponents: .date)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .labelsHidden()
-            }
         }
-        .onChange(of: selectedDate) { value in
-            text = selectedDate.toString(format: .ddMMyy)
-            
-            withAnimation {
-                showCalendarPicker.toggle()
-            }
-        }
-    }
-}
-
-extension InputField {
-    enum Style {
-        case text
-        case date
     }
 }
 
 #Preview {
-    InputField(
-        style: .date,
-        title: "Название проекта",
-        placeholder: "Введите данные...",
-        text: .constant("")
-    )
+    ZStack {
+        Colors.greenCustom.swiftUIColor
+        
+        InputField(
+            title: "Название проекта", 
+            titleColor: Colors.blackCustom.swiftUIColor,
+            placeholder: "Введите данные...",
+            text: .constant("")
+        )
+    }
 }

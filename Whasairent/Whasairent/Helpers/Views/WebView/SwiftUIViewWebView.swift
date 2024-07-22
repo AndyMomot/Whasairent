@@ -1,9 +1,5 @@
 //
 //  SwiftUIViewWebView.swift
-//  Monobanka
-//
-//  Created by Andrii Momot on 01.02.2024.
-//
 
 import SwiftUI
 import WebKit

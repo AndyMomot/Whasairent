@@ -50,6 +50,15 @@
 		4706DC102C4C019200980739 /* SwiftUIViewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC052C4C019200980739 /* SwiftUIViewWebView.swift */; };
 		4706DC122C4C019200980739 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC092C4C019200980739 /* InputField.swift */; };
 		4706DC142C4C019200980739 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC0D2C4C019200980739 /* NextButton.swift */; };
+		4706DC2A2C4EA9C200980739 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC272C4EA9C200980739 /* TabBar.swift */; };
+		4706DC2B2C4EA9C200980739 /* TabBarCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC282C4EA9C200980739 /* TabBarCustomView.swift */; };
+		4706DC2C2C4EA9C200980739 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC292C4EA9C200980739 /* TabBarViewModel.swift */; };
+		4706DC302C4EAE2F00980739 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC2F2C4EAE2F00980739 /* HomeView.swift */; };
+		4706DC322C4EAE3800980739 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC312C4EAE3800980739 /* HomeViewModel.swift */; };
+		4706DC352C4EBFF600980739 /* CreatePlainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC342C4EBFF600980739 /* CreatePlainView.swift */; };
+		4706DC372C4EC02100980739 /* CreatePlaineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC362C4EC02100980739 /* CreatePlaineViewModel.swift */; };
+		4706DC3A2C4EC4EE00980739 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC392C4EC4ED00980739 /* ImagePicker.swift */; };
+		4706DC3D2C4ECDA900980739 /* PlaineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4706DC3C2C4ECDA900980739 /* PlaineCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +107,15 @@
 		4706DC052C4C019200980739 /* SwiftUIViewWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIViewWebView.swift; sourceTree = "<group>"; };
 		4706DC092C4C019200980739 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		4706DC0D2C4C019200980739 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		4706DC272C4EA9C200980739 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		4706DC282C4EA9C200980739 /* TabBarCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCustomView.swift; sourceTree = "<group>"; };
+		4706DC292C4EA9C200980739 /* TabBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		4706DC2F2C4EAE2F00980739 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4706DC312C4EAE3800980739 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4706DC342C4EBFF600980739 /* CreatePlainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlainView.swift; sourceTree = "<group>"; };
+		4706DC362C4EC02100980739 /* CreatePlaineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaineViewModel.swift; sourceTree = "<group>"; };
+		4706DC392C4EC4ED00980739 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4706DC3C2C4ECDA900980739 /* PlaineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaineCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +179,8 @@
 				4706DBE92C4BD31800980739 /* Preloader */,
 				4706DBEE2C4BEE1400980739 /* Onboarding */,
 				4706DBF92C4BFE7100980739 /* Privacy */,
+				4706DC262C4EA9C200980739 /* TabBar */,
+				4706DC2D2C4EAE1700980739 /* Main */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -317,6 +337,7 @@
 		4706DBFE2C4C019200980739 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4706DC382C4EC4ED00980739 /* ImagePicker */,
 				4706DBFF2C4C019200980739 /* Views */,
 			);
 			path = Helpers;
@@ -354,6 +375,60 @@
 				4706DC0D2C4C019200980739 /* NextButton.swift */,
 			);
 			path = NextButton;
+			sourceTree = "<group>";
+		};
+		4706DC262C4EA9C200980739 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC272C4EA9C200980739 /* TabBar.swift */,
+				4706DC282C4EA9C200980739 /* TabBarCustomView.swift */,
+				4706DC292C4EA9C200980739 /* TabBarViewModel.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4706DC2D2C4EAE1700980739 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC2E2C4EAE2400980739 /* Home */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4706DC2E2C4EAE2400980739 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC3B2C4ECD9C00980739 /* Cells */,
+				4706DC332C4EBFE500980739 /* CreatePlaine */,
+				4706DC2F2C4EAE2F00980739 /* HomeView.swift */,
+				4706DC312C4EAE3800980739 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4706DC332C4EBFE500980739 /* CreatePlaine */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC342C4EBFF600980739 /* CreatePlainView.swift */,
+				4706DC362C4EC02100980739 /* CreatePlaineViewModel.swift */,
+			);
+			path = CreatePlaine;
+			sourceTree = "<group>";
+		};
+		4706DC382C4EC4ED00980739 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC392C4EC4ED00980739 /* ImagePicker.swift */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		4706DC3B2C4ECD9C00980739 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4706DC3C2C4ECDA900980739 /* PlaineCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,8 +539,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4706DC2A2C4EA9C200980739 /* TabBar.swift in Sources */,
 				4706DC142C4C019200980739 /* NextButton.swift in Sources */,
+				4706DC352C4EBFF600980739 /* CreatePlainView.swift in Sources */,
+				4706DC3A2C4EC4EE00980739 /* ImagePicker.swift in Sources */,
 				4706DC102C4C019200980739 /* SwiftUIViewWebView.swift in Sources */,
+				4706DC302C4EAE2F00980739 /* HomeView.swift in Sources */,
+				4706DC3D2C4ECDA900980739 /* PlaineCell.swift in Sources */,
+				4706DC2B2C4EA9C200980739 /* TabBarCustomView.swift in Sources */,
 				4706DBC42C4BCCF500980739 /* Colors.generated.swift in Sources */,
 				4706DBED2C4BD33100980739 /* PreloaderViewModel.swift in Sources */,
 				4706DC122C4C019200980739 /* InputField.swift in Sources */,
@@ -474,12 +555,14 @@
 				4706DBF42C4BEE1400980739 /* OnboardingView.swift in Sources */,
 				4706DB552C4BC69C00980739 /* RootViewController.swift in Sources */,
 				4706DB512C4BC69C00980739 /* AppDelegate.swift in Sources */,
+				4706DC372C4EC02100980739 /* CreatePlaineViewModel.swift in Sources */,
 				4706DBA62C4BCB6300980739 /* Double+Additions.swift in Sources */,
 				4706DBA72C4BCB6300980739 /* Date+Additions.swift in Sources */,
 				4706DB772C4BC97E00980739 /* FileManagerService.swift in Sources */,
 				4706DBFD2C4BFE9200980739 /* PrivacyPolicyViewModel.swift in Sources */,
 				4706DBEB2C4BD32A00980739 /* PreloaderView.swift in Sources */,
 				4706DBA82C4BCB6300980739 /* View+Additions.swift in Sources */,
+				4706DC2C2C4EA9C200980739 /* TabBarViewModel.swift in Sources */,
 				4706DB682C4BC81800980739 /* RootContentView.swift in Sources */,
 				4706DBF52C4BEE1400980739 /* OnboardingViewModel.swift in Sources */,
 				4706DBCA2C4BCCF500980739 /* Fonts.generated.swift in Sources */,
@@ -489,6 +572,7 @@
 				4706DBCF2C4BCCF500980739 /* Strings.generated.swift in Sources */,
 				4706DB532C4BC69C00980739 /* SceneDelegate.swift in Sources */,
 				4706DBF82C4BF54A00980739 /* PlaneView.swift in Sources */,
+				4706DC322C4EAE3800980739 /* HomeViewModel.swift in Sources */,
 				4706DB762C4BC97E00980739 /* DefaultsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

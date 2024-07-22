@@ -1,6 +1,5 @@
 //
 //  NextButton.swift
-//  Goobeltoin
 
 import SwiftUI
 
